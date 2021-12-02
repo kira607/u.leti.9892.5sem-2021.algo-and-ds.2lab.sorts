@@ -1,17 +1,29 @@
-from algorithms import binary_search
+from algorithms import (
+    count_sort,
+    quick_sort,
+    insertion_sort,
+    bogo_sort,
+    binary_search,
+)
 
 
 def main():
-    array = [i for i in range(0, 1000)]
-    for i in range(0, 1000):
-        print(i)
-        assert binary_search(array, i) == i
-    assert binary_search(array, -1) == -1
-    assert binary_search(array, 1001) == -1
-    
-    array = [1,3,5,6,7,8,9,10,11,12,13]
-    assert binary_search(array, 2) == -1
-    assert binary_search(array, 3) == 1
+    print(count_sort([9, 9, 8, 4, 3, 2, 0, 10]))
+    a = [-1, 6, 3, 1, 7, 5, 2, 6]
+    quick_sort(a)
+    print(a)
+    a = [-1, 6, 3, 1, 7, 5, 2, 6]
+    insertion_sort(a)
+    print(a)
+    a = [-1, 6, 3, 1, 7, 5, 2, 6]
+    bogo_sort(a)
+    print(a)
+    print(binary_search(a, 1))
+    print(binary_search(a, 3))
+    print(binary_search(a, 7))
+    print(binary_search(a, -1))
+    print(binary_search(a, 100))
+    print(binary_search(a, 0))
 
 
 if __name__ == '__main__':

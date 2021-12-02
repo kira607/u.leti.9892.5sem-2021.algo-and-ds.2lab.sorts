@@ -1,4 +1,5 @@
-from .. import binary_search
+from algorithms import binary_search
+
 
 def test_binary_search():
     array = [i for i in range(0, 1000)]
